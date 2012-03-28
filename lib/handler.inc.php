@@ -174,7 +174,6 @@ if (isset ($_POST['do']))
 					
 			$query = "INSERT INTO sk_item_log (user_id, item_id, list_id, raid_id, pos_old, pos_new, lootmode, signee) VALUES
 					  ($player, $item, $list_id, $raid_id, $pos_old, $pos_new, $lootmode, ".$_SESSION['auth_id'].")";
-			echo $query;
 			mysql_query($query);	
 		}
 	}
@@ -192,8 +191,6 @@ if (isset ($_POST['do']))
 		
 		if ($row['lootmode'] == 0)
 		{
-			echo "uid=".$row['user_id'];
-			
 			// revert suicide ;_;
 			$old_pos = $row['pos_old'];
 			$new_pos = $row['pos_new'];
@@ -261,10 +258,7 @@ if (isset ($_POST['do']))
 		{
 			$query = "INSERT INTO sk_users (username) VALUES ('".$name."')";
 			$result = mysql_query($query);
-			$uid = mysql_insert_id();
-			
-			echo mysql_error();
-			
+			$uid = mysql_insert_id();		
 		}
 		// else get sk_users.id
 		else
@@ -298,7 +292,5 @@ if (isset ($_POST['do']))
 		}
 				
 	}
-	
-	echo mysql_error();
 }
 ?>
