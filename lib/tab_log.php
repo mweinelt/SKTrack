@@ -63,16 +63,22 @@ if (mysql_num_rows($result) > 0)
 	$result = mysql_query($query);		
 	
 	
-	while ($row = mysql_fetch_array($result))			
-		$items[$row['raid_id']][] = array("username" => $row['username'],
+	while ($row = mysql_fetch_array($result))
+	{
+		    $lootTime = timetostr(handleTZ($row['date']));
+			$raidStart = timetostr(handleTZ($row['start']));
+			$raidEnd = date("G:i", handleTZ($row['end']));
+		
+			$items[$row['raid_id']][] = array("username" => $row['username'],
 					 				  	"item_id" => $row['item_id'],
 					 				  	"item_quality" => $row['quality'],
 					 				  	"item_name" => $row['name'],
 					 				  	"lootmode" => lootmode($row['lootmode'], $row['pos_old'], $row['pos_new']),
-					 				  	"loottime" => timetostr(strtotime($row['date'])),
+					 				  	"loottime" => $lootTime,
 					 				  	"raid_title" => $row['title'],
-					 				  	"raid_start" => timetostr(strtotime($row['start'])),
-					 				  	"raid_end" => date("G:i", strtotime($row['end'])));
+					 				  	"raid_start" => $raidStart,
+					 				  	"raid_end" => $raidEnd);
+	}
 	
 }
 	

@@ -39,7 +39,7 @@
 								<td width="200">{$item['username']}</td>
 								<td width="450"><a class="q{$item['item_quality']}" rel="domain=de,item={$item['item_id']}"><img src="http://www.wow-castle.de/bboard/images/proxy.php?item={$item['item_id']}" class="item">&nbsp;{$item['item_name']}</a></td>
 								<td width="160">{$item['lootmode']}</td>
-								<td width="120">{$item['time']}</td>
+								<td width="120">{$item['loottime']}</td>
 							</tr>
 							{/foreach}
 							{/foreach}

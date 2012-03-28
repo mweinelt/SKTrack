@@ -68,17 +68,22 @@ $result = mysql_query($query);
 
 $items = array();
 $i = 0;
-while ($row = mysql_fetch_assoc($result))			
+while ($row = mysql_fetch_assoc($result))
+{
+	$lootTime = timetostr(handleTZ($row['date']));
+	$raidStart = timetostr(handleTZ($row['start']));
+	
 	$items[] = array("username" => $row['username'],
 					 "item_id" => $row['item_id'],
 					 "item_quality" => $row['quality'],
 					 "item_name" => $row['name'],
 					 "lootmode" => lootmode($row['lootmode'], $row['pos_old'], $row['pos_new']),
-					 "loottime" => timetostr(strtotime($row['date'])),
+					 "loottime" => $lootTime,
 					 "raid_title" => $row['raidtitle'],
 					 "raid_id" => $row['raid_id'],
-					 "raid_start" => timetostr(strtotime($row['start'])),
-					 "revert" => $i++ == 0 ? true : false);
+					 "raid_start" => $raidStart,
+					 "revert" => $i++ == 0 ? true : false); // only last entry allows reverting to prevent invalid unsuiciding for now
+}
 
 $smarty->assign("items", $items);
 	
