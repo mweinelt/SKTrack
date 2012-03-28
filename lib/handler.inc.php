@@ -173,7 +173,7 @@ if (isset ($_POST['do']))
 			}
 					
 			$query = "INSERT INTO sk_item_log (user_id, item_id, list_id, raid_id, pos_old, pos_new, lootmode, signee) VALUES
-					  ($player, $item, $list_id, $raid_id, $pos_old, $pos_new, $lootmode, $_SESSION['auth_id'])";
+					  ($player, $item, $list_id, $raid_id, $pos_old, $pos_new, $lootmode, ".$_SESSION['auth_id'].")";
 			echo $query;
 			mysql_query($query);	
 		}
