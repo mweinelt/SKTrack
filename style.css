@@ -1,0 +1,105 @@
+body {
+	background: #000000;
+	color: #FFFFFF;
+	font-size: 10pt;
+}
+body,p,h1,h2,h3,h4,table,td,th,ul,ol,textarea,input
+{
+	font-family: verdana,helvetica,arial,sans-serif;
+}
+form { display: inline; }
+
+fieldset { width: 400px; display: inline; border: 0px; }
+legend { font-weight: bold; }
+
+select { height: 400px; width: 90%; }
+
+#session {
+	width: 100%;
+	padding: 4px;
+	padding-left: 10px;
+	
+	background: #333333;
+	border-top: 2px solid grey;
+	border-bottom: 2px solid grey;
+	color: white;
+}
+
+img.item { height: 24px; width: 24px; float: left; }
+
+.q0, .q0 a { color: #9d9d9d !important }
+.q1, .q1 a { color: #ffffff !important }
+.q2, .q2 a { color: #1eff00 !important }
+.q3, .q3 a { color: #0070dd !important }
+.q4, .q4 a { color: #a335ee !important }
+.q5, .q5 a { color: #ff8000 !important }
+.q6, .q6 a { color: #e5cc80 !important }
+.q7, .q7 a { color: #ff0000 !important }
+.q8, .q8 a { color: #ffff98 !important }
+.error { color: red; !important }
+
+input.text {
+	width: 120px;
+	
+	background: #82A267;
+	border: 1px solid black;
+}
+input.button {
+	background: rgb(245, 245, 245);
+	background-image: -moz-linear-gradient(center top , rgb(245, 245, 245), rgb(241, 241, 241))
+	border-color: rgba(0, 0, 0, 0.1);
+	color: rgb(85, 85, 85);
+	margin: 16px 8px;
+}
+
+#content
+{
+	background: #222222;
+	border-left: 2px solid grey;
+	border-right: 2px solid grey;
+	border-bottom: 2px solid grey;
+	padding: 5px;
+}
+
+#navlist
+{
+	margin: 0;
+	border-bottom: 2px solid grey;
+	font-weight: bold;
+	padding-left: 10px;
+	padding-top: 10px;
+}
+
+#navlist li
+{
+	list-style: none;
+	margin: 0;
+	display: inline;
+}
+
+#navlist li a
+{
+	padding: 3px 0.5em;
+	margin-left: 0px;
+	border: 1px solid #778;
+	border-bottom: 2px solid grey;
+	background: #333333;
+	text-decoration: none;
+}
+
+#navlist li a:link { color: #FFF; }
+#navlist li a:visited { color: #FFF; }
+
+#navlist li a:hover
+{
+	color: #000;
+	background: #82A267;
+	border-color: grey;
+}
+
+#navlist li a#current
+{
+	background: #82A267;
+	color: #000000;
+	border-bottom: 2px solid grey;
+}
