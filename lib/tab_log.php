@@ -71,7 +71,8 @@ if (mysql_num_rows($result) > 0)
 					 				  	"lootmode" => lootmode($lootmode, $row['pos_old'], $row['pos_new']),
 					 				  	"loottime" => timetostr(strtotime($row['date'])),
 					 				  	"raid_title" => $row['title'],
-					 				  	"raid_start" => timetostr(strtotime($row['start'])));
+					 				  	"raid_start" => timetostr(strtotime($row['start'])),
+					 				  	"raid_end" => date("G:i", strtotime($row['end'])));
 	
 }
 	

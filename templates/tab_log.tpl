@@ -29,7 +29,7 @@
 									<table width="100%">
 										<tr>
 											<td>{$raid['0']['raid_title']}</td>
-											<td style="text-align: right;">{$raid['0']['raid_start']}</td>
+											<td style="text-align: right;">{$raid['0']['raid_start']} - {$raid['0']['raid_end']}</td>
 										</tr>
 									</table>
 								</td>
