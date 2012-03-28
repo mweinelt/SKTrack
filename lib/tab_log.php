@@ -42,7 +42,7 @@ $smarty->assign("pool", $pool);
  *******************/
 
 // latest raids
-$query = "SELECT id FROM sk_raids ORDER BY start DESC LIMIT 10";
+$query = "SELECT id FROM sk_raids WHERE list_id = ".$_SESSION['list_sel']." ORDER BY start DESC LIMIT 10";
 $result = mysql_query($query);
 
 $raids = array();
