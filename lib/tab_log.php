@@ -68,7 +68,7 @@ if (mysql_num_rows($result) > 0)
 					 				  	"item_id" => $row['item_id'],
 					 				  	"item_quality" => $row['quality'],
 					 				  	"item_name" => $row['name'],
-					 				  	"lootmode" => lootmode($lootmode, $row['pos_old'], $row['pos_new']),
+					 				  	"lootmode" => lootmode($row['lootmode'], $row['pos_old'], $row['pos_new']),
 					 				  	"loottime" => timetostr(strtotime($row['date'])),
 					 				  	"raid_title" => $row['title'],
 					 				  	"raid_start" => timetostr(strtotime($row['start'])),
