@@ -7,7 +7,7 @@
 		<script type="text/javascript" src="http://static.wowhead.com/widgets/power.js"></script>
 	</head>
 	<body>
-		<h1>Envy / Suicide Kings</h1>
+		<h1>{$sk['title']}</h1>
 		<div id="session">
 		{if $logged_in}
 			<form name="logout" method="POST" action="index.php">

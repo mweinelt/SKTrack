@@ -46,12 +46,12 @@ function lootmode($mode, $old = -1, $new = -1)
 
 function handleTZ($timestamp)
 {
-	global $tz_mysql, $tz_target;
+	global $tz;
 
 	// timestamps in mysql can have a different timezone as system,
 	// thanks to http://stackoverflow.com/questions/4573660/php-mysql-timestamp-and-timezones
-	$time = new DateTime($timestamp, new DateTimeZone($tz_mysql));
-	$time->setTimezone(new DateTimeZone($tz_target));
+	$time = new DateTime($timestamp, new DateTimeZone($tz['mysql']));
+	$time->setTimezone(new DateTimeZone($tz['target']));
 
 	return $time->getTimestamp();	
 }

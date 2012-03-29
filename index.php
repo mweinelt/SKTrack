@@ -89,7 +89,9 @@ if (isset($template))
 
 mysql_close();
 
-// render main template
+// generic template thingys
+
+$smarty->assign("sk", $sk);
 
 $smarty->display('structure.tpl');
  

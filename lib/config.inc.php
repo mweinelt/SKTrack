@@ -16,8 +16,14 @@ $db["pass"]		= "";
 $db["db"]		= "sk";
 
 // compensate for timezone differences between mysql and php
-$tz_mysql		= "UTC";
-$tz_target		= "GMT";
+$tz			= array();
+$tz['mysql']		= "UTC";
+$tz['target']		= "GMT";
+
+// general setup
+$sk			= array();
+$sk['title'] 		= "Suicide Kings";
+
 
 /* Here Be Dragons */
 
