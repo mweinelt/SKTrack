@@ -67,7 +67,7 @@ if (mysql_num_rows($result) > 0)
 	{
 		    $lootTime = timetostr(handleTZ($row['date']));
 			$raidStart = timetostr(handleTZ($row['start']));
-			$raidEnd = date("G:i", handleTZ($row['end']));
+			$raidEnd = strftime("%I:%M", handleTZ($row['end']));
 		
 			$items[$row['raid_id']][] = array("username" => $row['username'],
 					 				  	"item_id" => $row['item_id'],
