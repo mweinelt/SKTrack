@@ -65,7 +65,7 @@ if (mysql_num_rows($result) > 0)
 	
 	while ($row = mysql_fetch_array($result))
 	{
-		    $lootTime = timetostr(handleTZ($row['date']));
+		    $lootTime = strftime("%I:%M", handleTZ($row['date']));
 			$raidStart = timetostr(handleTZ($row['start']));
 			$raidEnd = strftime("%I:%M", handleTZ($row['end']));
 		

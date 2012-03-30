@@ -12,11 +12,11 @@ function timetostr($timestamp)
 {
 	$date = "";
 	if (date("Y-m-d", $timestamp) == date("Y-m-d"))
-		$date .= "Heute, ".strftime("%I:%M", $timestamp);
+		$date .= "Heute, ".strftime("%H:%M", $timestamp);
 	elseif (date("Y-m-d", $timestamp) == date("Y-m-d", time() - 86400))
-		$date .= "Gestern, ".strftime("%I:%M", $timestamp);
+		$date .= "Gestern, ".strftime("%H:%M", $timestamp);
 	else
-		$date .= strftime("%d. %b %Y, %I:%M", $timestamp);
+		$date .= strftime("%d. %b %Y, %H:%M", $timestamp);
 
 	return $date;
 
