@@ -64,13 +64,13 @@ $query = "SELECT * FROM sk_item_log
 		  WHERE sk_item_log.raid_id = ".$_SESSION['raid_sel']."
 		  ORDER BY date DESC
 		  LIMIT 5";
-$result = mysql_query($query);		
+$result = mysql_query($query);
 
 $items = array();
 $i = 0;
 while ($row = mysql_fetch_assoc($result))
 {
-	$lootTime = timetostr(handleTZ($row['date']));
+	$lootTime = strftime("%H:%M", handleTZ($row['date']));
 	$raidStart = timetostr(handleTZ($row['start']));
 	
 	$items[] = array("username" => $row['username'],
