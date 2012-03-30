@@ -18,7 +18,7 @@
 					</td>
 					<td>&nbsp;</td>
 					<td style="vertical-align: top;">
-						<table style="border: 2px solid grey;" width="910">
+						<table style="border: 2px solid grey;" width="710">
 							<tr>
 								<td style="border-bottom: 2px solid grey; background: black; font-weight: bold;" colspan="4">Letzte Items</td>
 							</tr>
@@ -36,10 +36,10 @@
 							</tr>
 							{foreach $raid as $item}
 							<tr>
-								<td width="200">{$item['username']}</td>
-								<td width="450"><a class="q{$item['item_quality']}" rel="domain=de,item={$item['item_id']}"><img src="http://www.wow-castle.de/bboard/images/proxy.php?item={$item['item_id']}" class="item">&nbsp;{$item['item_name']}</a></td>
-								<td width="160">{$item['lootmode']}</td>
-								<td width="120">{$item['loottime']}</td>
+								<td width="120">{$item['username']}</td>
+								<td width="350"><a class="q{$item['item_quality']}" rel="domain=de,item={$item['item_id']}"><img src="http://www.wow-castle.de/bboard/images/proxy.php?item={$item['item_id']}" class="item">&nbsp;{$item['item_name']}</a></td>
+								<td width="140">{$item['lootmode']}</td>
+								<td width="100">{$item['loottime']}</td>
 							</tr>
 							{/foreach}
 							{/foreach}
