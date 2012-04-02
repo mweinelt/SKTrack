@@ -25,6 +25,10 @@ $sk			= array();
 $sk['title'] 		= "Suicide Kings";
 $sk['locale']		= "de_DE";
 
+$sk['log_autorefresh']			= true;
+$sk['log_autorefresh_raid_active']	= 0.5 * 60; // 30 seconds
+$sk['log_autorefresh_raid_inactive']	= 15 * 60; // 15 minute
+
 
 /* Here Be Dragons */
 

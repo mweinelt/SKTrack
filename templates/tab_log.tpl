@@ -1,3 +1,10 @@
+{if $sk['log_autorefresh']}
+<script type="text/javascript">
+<!--
+setTimeout("location.reload(true);", {$sk['__log_autorefresh_time']});
+-->
+</script>
+{/if}
 <h2>Rangliste und Item-Log</h2>
 <table>
 	<tr>

@@ -28,14 +28,31 @@ $query = "SELECT sk_list_position.*,sk_users.username as name
 		  ORDER BY position ASC";
 $result = mysql_query($query);
 
-$pool = array(); // raid 
+$pool = array(); // raid
+$raid_active = false; 
 while ($row = mysql_fetch_array($result))
+{
+	if ($row['raid_id'] != -1) // important for refresh time
+		$raid_active = true;
+		
 	$pool[] = array("pos" => $row['position'],
 					"name" => $row['name'],
 					"uid" => $row['user_id'],
 					"active" => $row['raid_id'] != -1 ? true : false);
+}
 
 $smarty->assign("pool", $pool);
+
+/*******************
+ * Auto-Refresh
+ *******************/
+
+if ($raid_active)
+	$sk['__log_autorefresh_time'] = $sk['log_autorefresh_raid_active'];
+else
+	$sk['__log_autorefresh_time'] = $sk['log_autorefresh_raid_inactive'];
+
+$sk['__log_autorefresh_time'] = $sk['__log_autorefresh_time'] * 1000; // compensate for ms in js
 
 /*******************
  * Item Log
