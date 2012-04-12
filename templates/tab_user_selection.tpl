@@ -13,19 +13,19 @@
 			{/foreach}
 			</select>
 			<p>1. Spieler hinzuf&uuml;gen:
-			<form name="adduser" method="POST" action="index.php">
-			<input type="hidden" name="do" value="adduser">
-			<input type="hidden" name="list" value="{$list_sel}">
-			<input class="text" type="text" name="name" style="width: 280px;">
-			<input style="border: 0px;" type="submit" value="&#187;">
+			<form id="adduser" method="post" action="index.php">
+				<input type="hidden" name="do" value="adduser" />
+				<input type="hidden" name="list" value="{$list_sel}" />
+				<input class="text" type="text" name="name" style="width: 280px;" />
+				<input style="border: 0px;" type="submit" value="&#187;" />
 			</form></p>
 			<p>2. Spieler in den Raid einf&uuml;gen.</p>
 		<!-- Raid List -->
 		</td>
-			<td style="vertical-align: top;">
-				<form name="sublist" action="index.php" method="POST" onsubmit="selectAll();">
-				<input type="hidden" name="do" value="startraid">
-				<input type="hidden" name="list" value="{$list_sel}">
+		<td style="vertical-align: top;">
+			<form id="sublist" action="index.php" method="post" onsubmit="selectAll();">
+				<input type="hidden" name="do" value="startraid" />
+				<input type="hidden" name="list" value="{$list_sel}" />
 				<select id="raid" name="raid[]" size="50" multiple="multiple" onclick="move(false);">
 				<!-- loop only for debugging purposes -->
 				{foreach $raid as $player}
@@ -34,10 +34,10 @@
 				</select>
 				<p>3. Raid fertig? Titel eingeben...<br />
 				&nbsp;<br />
-				<input class="text" type="text" id="raidname" name="raidname" style="width: 315px;"><br /><br />
+				<input class="text" type="text" id="raidname" name="raidname" style="width: 315px;" /><br /><br />
 				...dann weiter zur Lootvergabe!</br />
-				<input class="button" onclick="return isEmpty();" type="submit" value="Raid starten"></p>
-				</form>
-			</td>
+				<input class="button" onclick="return isEmpty();" type="submit" value="Raid starten" /></p>
+			</form>
+		</td>
 	</tr>
 </table>

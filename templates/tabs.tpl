@@ -4,7 +4,7 @@
 			<li{if $id == $list_sel} id="active"{/if}><a{if $id == $list_sel} id="current"{/if} href="?list={$id}">{$tab['title']}</a></li>
 		{/foreach}
 		{if $logged_in}
-		<form name="addlist" action="index.php" method="POST">
+		<form name="addlist" action="index.php" method="post">
 		<li style="padding-left: 5px;">
 			<input type="hidden" name="do" value="addlist">
 			<input class="text" type="text" name="title">

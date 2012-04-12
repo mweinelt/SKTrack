@@ -12,8 +12,8 @@ setTimeout("location.reload(true);", {$sk['__log_autorefresh_time']});
 			<table>
 				<tr>
 					<td style="vertical-align: top;">
-						<table style="border: 2px solid grey;" width="250">
-							<tr style="background: black; font-weight: bold;"><td style="border-bottom: 2px solid grey;" width="40">#</td><td style="border-bottom: 2px solid grey;">Spieler</td></tr>
+						<table style="border: 2px solid grey; width: 250px;">
+							<tr style="background: black; font-weight: bold;"><td style="border-bottom: 2px solid grey; width: 40px;">#</td><td style="border-bottom: 2px solid grey;">Spieler</td></tr>
 							<!-- Complete List -->
 							{foreach $pool as $player}
 							<tr {if ($player['active'] || $lists[$list_sel]['active_raid'] == -1) }style="color: white;"{else}style="color: grey;"{/if}>
@@ -25,7 +25,7 @@ setTimeout("location.reload(true);", {$sk['__log_autorefresh_time']});
 					</td>
 					<td>&nbsp;</td>
 					<td style="vertical-align: top;">
-						<table style="border: 2px solid grey;" width="710">
+						<table style="border: 2px solid grey; width: 710px;">
 							<tr>
 								<td style="border-bottom: 2px solid grey; background: black; font-weight: bold;" colspan="4">Letzte Items</td>
 							</tr>
@@ -44,7 +44,7 @@ setTimeout("location.reload(true);", {$sk['__log_autorefresh_time']});
 							{foreach $raid as $item}
 							<tr>
 								<td width="120">{$item['username']}</td>
-								<td width="350"><a class="q{$item['item_quality']}" rel="domain=de,item={$item['item_id']}"><img src="http://www.wow-castle.de/bboard/images/proxy.php?item={$item['item_id']}" class="item">&nbsp;{$item['item_name']}</a></td>
+								<td width="350"><a class="q{$item['item_quality']}" rel="domain=de,item={$item['item_id']}"><img alt="{$item['item_name']} ({$item['item_id']})" src="http://www.wow-castle.de/bboard/images/proxy.php?item={$item['item_id']}" class="item" />&nbsp;{$item['item_name']}</a></td>
 								<td width="140">{$item['lootmode']}</td>
 								<td width="100">{$item['loottime']}</td>
 							</tr>
