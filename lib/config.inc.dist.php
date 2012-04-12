@@ -30,7 +30,7 @@ $sk['log_autorefresh_raid_active']	= 0.5 * 60; // 30 seconds
 $sk['log_autorefresh_raid_inactive']	= 15 * 60; // 15 minute
 
 $sk['external_link_target']		= "_blank";
-$sk['baselink_character']		= "http://wow-castle.de/armory/character-sheet.xml?r=WoW-Castle+PvE&cn=";
+$sk['baselink_character']		= "http://wow-castle.de/armory/character-sheet.xml?r=WoW-Castle+PvE&amp;cn=";
 $sk['baselink_item']			= "http://de.wowhead.com/item=";
 
 
