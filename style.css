@@ -7,12 +7,15 @@ body,p,h1,h2,h3,h4,table,td,th,ul,ol,textarea,input
 {
 	font-family: verdana,helvetica,arial,sans-serif;
 }
+
 form { display: inline; }
 
 fieldset { width: 400px; display: inline; border: 0px; }
 legend { font-weight: bold; }
 
 select { height: 400px; width: 90%; }
+
+a {	color: #fff; text-decoration: none; }
 
 #session {
 	width: 100%;

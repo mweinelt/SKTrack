@@ -18,7 +18,7 @@ setTimeout("location.reload(true);", {$sk['__log_autorefresh_time']});
 							{foreach $pool as $player}
 							<tr {if ($player['active'] || $lists[$list_sel]['active_raid'] == -1) }style="color: white;"{else}style="color: grey;"{/if}>
 								<td>{$player['pos'] + 1}</td>
-								<td>{$player['name']}</td>
+								<td><a href="{$sk['baselink_character']}{$player['name']}" target="{$sk['external_link_target']}">{$player['name']}</a></td>
 							</tr>
 							{/foreach}
 						</table>
@@ -43,8 +43,8 @@ setTimeout("location.reload(true);", {$sk['__log_autorefresh_time']});
 							</tr>
 							{foreach $raid as $item}
 							<tr>
-								<td style="width:120px">{$item['username']}</td>
-								<td style="width:350px"><a class="q{$item['item_quality']}" rel="domain=de,item={$item['item_id']}"><img alt="{$item['item_name']} ({$item['item_id']})" src="http://www.wow-castle.de/bboard/images/proxy.php?item={$item['item_id']}" class="item" />&nbsp;{$item['item_name']}</a></td>
+								<td style="width:120px"><a href="{$sk['baselink_character']}{$item['username']}" target="{$sk['external_link_target']}">{$item['username']}</a></td>
+								<td style="width:350px"><a href="{$sk['baselink_character']}{$item['item_id']}" target="{$sk['external_link_target']}" class="q{$item['item_quality']}" rel="domain=de,item={$item['item_id']}"><img alt="{$item['item_name']} ({$item['item_id']})" src="http://www.wow-castle.de/bboard/images/proxy.php?item={$item['item_id']}" class="item" />&nbsp;{$item['item_name']}</a></td>
 								<td style="width:140px">{$item['lootmode']}</td>
 								<td style="width:100px">{$item['loottime']}</td>
 							</tr>
