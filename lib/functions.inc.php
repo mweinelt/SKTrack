@@ -48,12 +48,17 @@ function handleTZ($timestamp)
 {
 	global $tz;
 
-	// timestamps in mysql can have a different timezone as system,
-	// thanks to http://stackoverflow.com/questions/4573660/php-mysql-timestamp-and-timezones
-	$time = new DateTime($timestamp, new DateTimeZone($tz['mysql']));
-	$time->setTimezone(new DateTimeZone($tz['target']));
+	if (strtolower($tz['mysql']) == strtolower($tz['target']))
+	{
+		// timestamps in mysql can have a different timezone as system,
+		// thanks to http://stackoverflow.com/questions/4573660/php-mysql-timestamp-and-timezones
+		$time = new DateTime($timestamp, new DateTimeZone($tz['mysql']));
+		$time->setTimezone(new DateTimeZone($tz['target']));
+		
+		return $time->getTimestamp();	
+		
+	} else return $timestamp;
 
-	return $time->getTimestamp();	
 }
 
 ?>
