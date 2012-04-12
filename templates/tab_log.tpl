@@ -43,10 +43,10 @@ setTimeout("location.reload(true);", {$sk['__log_autorefresh_time']});
 							</tr>
 							{foreach $raid as $item}
 							<tr>
-								<td width="120">{$item['username']}</td>
-								<td width="350"><a class="q{$item['item_quality']}" rel="domain=de,item={$item['item_id']}"><img alt="{$item['item_name']} ({$item['item_id']})" src="http://www.wow-castle.de/bboard/images/proxy.php?item={$item['item_id']}" class="item" />&nbsp;{$item['item_name']}</a></td>
-								<td width="140">{$item['lootmode']}</td>
-								<td width="100">{$item['loottime']}</td>
+								<td style="width:120px">{$item['username']}</td>
+								<td style="width:350px"><a class="q{$item['item_quality']}" rel="domain=de,item={$item['item_id']}"><img alt="{$item['item_name']} ({$item['item_id']})" src="http://www.wow-castle.de/bboard/images/proxy.php?item={$item['item_id']}" class="item" />&nbsp;{$item['item_name']}</a></td>
+								<td style="width:140px">{$item['lootmode']}</td>
+								<td style="width:100px">{$item['loottime']}</td>
 							</tr>
 							{/foreach}
 							{/foreach}
