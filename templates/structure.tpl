@@ -2,6 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
  	<head>
 		<title>SKTrack</title>
+		<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
 		<link rel="stylesheet" type="text/css" href="style.css" />
 		<script type="text/javascript" src="sk.js"></script>
 		<script type="text/javascript" src="http://static.wowhead.com/widgets/power.js"></script>
