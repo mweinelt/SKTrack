@@ -103,7 +103,7 @@ function isLootEntryComplete()
 	var lootmode = document.getElementById('lootmode').value != -1 ? true : false;
 	var item = document.getElementById('itemvalid').value != -1 ? true : false;
 	
-	alert(player + ' ' + lootmode + ' ' + item);
+	//alert(player + ' ' + lootmode + ' ' + item);
 	
 	if (player && lootmode && item)
 		return true;
