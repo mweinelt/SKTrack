@@ -11,6 +11,8 @@
 require("lib/session.inc.php");
 require("lib/functions.inc.php");
 
+header('content-type: text/html; charset=utf-8');
+
 /*******************
  * List-Handling
  *******************/

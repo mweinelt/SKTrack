@@ -89,7 +89,7 @@ if (mysql_num_rows($result) > 0)
 			$items[$row['raid_id']][] = array("username" => $row['username'],
 					 				  	"item_id" => $row['item_id'],
 					 				  	"item_quality" => $row['quality'],
-					 				  	"item_name" => $row['name'],
+					 				  	"item_name" => htmlentities($row['name']),
 					 				  	"lootmode" => lootmode($row['lootmode'], $row['pos_old'], $row['pos_new']),
 					 				  	"loottime" => $lootTime,
 					 				  	"raid_title" => $row['title'],
