@@ -16,7 +16,7 @@
 			<form id="adduser" method="post" action="index.php">
 				<input type="hidden" name="do" value="adduser" />
 				<input type="hidden" name="list" value="{$list_sel}" />
-				<input class="text" type="text" name="name" style="width: 280px;" />
+				<input class="text" type="text" name="name" style="width: 280px;" autofocus="autofocus" />
 				<input style="border: 0px;" type="submit" value="&#187;" />
 			</form></p>
 			<p>2. Spieler in den Raid einf&uuml;gen.</p>
