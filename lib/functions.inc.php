@@ -27,7 +27,8 @@ function lootmode($mode, $old = -1, $new = -1)
 	switch ($mode)
 	{
 		case 0:
-			$lootmode = "Bedarf (".($old + 1)." &#8658; ".($new + 1).")";
+			$lootmode = "Bedarf";
+			$lootmode .= "(".($old + 1)." &#8658; ".($new + 1).")"; // append old->new pos
 			break;
 		case 1:
 			$lootmode = "Gier";
@@ -48,7 +49,7 @@ function handleTZ($timestamp)
 {
 	global $tz;
 
-	if (strtolower($tz['mysql']) == strtolower($tz['target']))
+	if (strtolower($tz['mysql']) != strtolower($tz['target']))
 	{
 		// timestamps in mysql can have a different timezone as system,
 		// thanks to http://stackoverflow.com/questions/4573660/php-mysql-timestamp-and-timezones
@@ -57,7 +58,7 @@ function handleTZ($timestamp)
 		
 		return $time->getTimestamp();	
 		
-	} else return $timestamp;
+	} else return strtotime($timestamp);
 
 }
 
