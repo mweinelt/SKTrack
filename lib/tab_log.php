@@ -92,8 +92,8 @@ if (mysql_num_rows($result) > 0)
 					 				  	"item_name" => htmlentities($row['name']),
 					 				  	"lootmode" => lootmode($row['lootmode'], $row['pos_old'], $row['pos_new']),
 					 				  	"loottime" => $lootTime,
-					 				  	"raid_title" => $row['title'],
-					 				  	"raid_start" => $raidStart,
+					 				  	"raid_title" => htmlentities($row['title']),
+					 				  	"raid_start" => htmlentities($raidStart), // can contain escapable chars (e.g. März)
 					 				  	"raid_end" => $raidEnd);
 	}
 	
