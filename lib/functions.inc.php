@@ -28,7 +28,7 @@ function lootmode($mode, $old = -1, $new = -1)
 	{
 		case 0:
 			$lootmode = "Bedarf";
-			$lootmode .= "(".($old + 1)." &#8658; ".($new + 1).")"; // append old->new pos
+			$lootmode .= " (".($old + 1)." &#8658; ".($new + 1).")"; // append old->new pos
 			break;
 		case 1:
 			$lootmode = "Gier";

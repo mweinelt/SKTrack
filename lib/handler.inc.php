@@ -19,7 +19,7 @@ if (isset ($_POST['do']))
 	{
 		$salt= md5(strtoupper($_POST['username']) . ":" . $_POST['password']);
 
-		$query= "SELECT id,username FROM sk_users WHERE username = '" . strtolower($_POST['username']) . "' AND password = '" . $salt . "'";
+		$query= "SELECT id,username FROM sk_users WHERE username = '" . strtolower(mysql_real_escape_string($_POST['username'])) . "' AND password = '" . $salt . "'";
 		$result= mysql_query($query);
 
 		if (mysql_num_rows($result) > 0)
@@ -47,7 +47,7 @@ if (isset ($_POST['do']))
 	elseif ($do == "addlist")
 	{
 		if (!empty ($_POST['title']))
-			mysql_query("INSERT INTO sk_lists (title) VALUES ('" . $_POST['title'] . "')");
+			mysql_query("INSERT INTO sk_lists (title) VALUES ('" . mysql_real_escape_string($_POST['title']) . "')");
 	}
 	elseif ($do == "startraid")
 	{		
@@ -245,8 +245,8 @@ if (isset ($_POST['do']))
 	elseif ($do == "adduser")
 	{
 		// post data
-		$name = $_POST['name'];
-		$list = $_POST['list'];
+		$name = mysql_real_escape_string($_POST['name']);
+		$list = intval($_POST['list']);
 		
 		// check if player exists in system
 		$query = "SELECT * FROM sk_users WHERE UPPER(username) = '".strtoupper($name)."'";
