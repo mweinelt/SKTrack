@@ -78,23 +78,28 @@ if (mysql_num_rows($result) > 0)
 		  	WHERE sk_item_log.raid_id IN (".implode(",", $raids).")
 		  	ORDER BY date DESC";
 	$result = mysql_query($query);		
-	
-	
+
+	$item_iterator = array();
 	while ($row = mysql_fetch_array($result))
 	{
 			$lootTime = strftime("%H:%M", handleTZ($row['date']));
 			$raidStart = timetostr(handleTZ($row['start']));
 			$raidEnd = strftime("%H:%M", handleTZ($row['end']));
 		
+			if (empty($item_iterator[$row['raid_id']]))
+				$item_iterator[$row['raid_id']] = 0;
+
 			$items[$row['raid_id']][] = array("username" => $row['username'],
-					 				  	"item_id" => $row['item_id'],
-					 				  	"item_quality" => $row['quality'],
-					 				  	"item_name" => htmlentities($row['name']),
-					 				  	"lootmode" => lootmode($row['lootmode'], $row['pos_old'], $row['pos_new']),
-					 				  	"loottime" => $lootTime,
-					 				  	"raid_title" => htmlentities($row['title']),
-					 				  	"raid_start" => htmlentities($raidStart), // can contain escapable chars (e.g. März)
-					 				  	"raid_end" => $raidEnd);
+										"item_iterator" => $item_iterator[$row['raid_id']]++,
+										"item_id" => $row['item_id'],
+										"item_quality" => $row['quality'],
+										"item_name" => htmlentities($row['name']),
+										"lootmode" => lootmode($row['lootmode'], $row['pos_old'], $row['pos_new']),
+										"loottime" => $lootTime,
+										"raid_iterator" => $row['raid_id'],
+										"raid_title" => htmlentities($row['title']),
+										"raid_start" => htmlentities($raidStart), // can contain escapable chars (e.g. März)
+										"raid_end" => $raidEnd);
 	}
 	
 }

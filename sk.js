@@ -111,3 +111,16 @@ function isLootEntryComplete()
 	return false;
 
 }
+
+/* Raid Log */
+function toggleRaidLog(raid_iterator, item_count)
+{
+	for (i = 0; i < item_count; i++)
+	{
+		elem = document.getElementById('raid'+raid_iterator+'_item'+i);
+		if (elem.style.display == 'table-row')
+			elem.style.display = 'none';
+		else
+			elem.style.display = 'table-row';
+	}
+}
