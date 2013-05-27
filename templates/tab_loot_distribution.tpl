@@ -29,7 +29,7 @@
 			seit {$raid_start}
 			<input onclick="document.getElementById('endraid').submit();" class="button" type="button" value="Raid beenden">
 			</p>
-			<table style="border: 2px solid grey;" width="400">
+			<table class="shadow" width="400">
 				<tr>
 					<td style="border-bottom: 2px solid grey; background: black; font-weight: bold;" colspan="2">Item vergeben</td>
 				</tr>
@@ -56,7 +56,7 @@
 			<br />
 			<table style="border: 2px solid grey;" width="890">
 				<tr>
-					<td style="border-bottom: 2px solid grey; background: black; font-weight: bold;" colspan="5">Letzte Items</td>
+					<td style="border-bottom: 2px solid grey; background: blue; font-weight: bold;" colspan="5">Letzte Items</td>
 				</tr>
 				{foreach $items as $item}
 				<tr>

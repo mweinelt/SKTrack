@@ -12,8 +12,8 @@ setTimeout("location.reload(true);", {$sk['__log_autorefresh_time']});
 			<table>
 				<tr>
 					<td style="vertical-align: top;">
-						<table style="border: 2px solid grey; width: 250px;">
-							<tr style="background: black; font-weight: bold;"><td style="border-bottom: 2px solid grey; width: 40px;">#</td><td style="border-bottom: 2px solid grey;">Spieler</td></tr>
+						<table class="shadow" style="width: 250px;">
+							<tr style="background: #491F13; font-weight: bold;"><td style="border-bottom: 2px solid grey; width: 40px;">#</td><td style="border-bottom: 2px solid grey;">Spieler</td></tr>
 							<!-- Complete List -->
 							{foreach $pool as $player}
 							<tr {if ($player['active'] || $lists[$list_sel]['active_raid'] == -1) }style="color: white;"{else}style="color: grey;"{/if}>
@@ -25,14 +25,14 @@ setTimeout("location.reload(true);", {$sk['__log_autorefresh_time']});
 					</td>
 					<td>&nbsp;</td>
 					<td style="vertical-align: top;">
-						<table style="border: 2px solid grey; width: 710px;">
+						<table class="shadow" width="710px">
 							<tr>
-								<td style="border-bottom: 2px solid grey; background: black; font-weight: bold;" colspan="4">Letzte Items</td>
+								<td style="border-bottom: 2px solid gray; background-color: #491F13; font-weight: bold;" colspan="4">Letzte Items</td>
 							</tr>
 							<!-- Item Log -->
 							{foreach $items as $raid}
 							<tr>
-								<td colspan="4" onclick="toggleRaidLog({$raid['0']['raid_iterator']}, {count($raid)})" style="background: black; border-bottom: 2px solid grey;">
+								<td colspan="4" onclick="toggleRaidLog({$raid['0']['raid_iterator']}, {count($raid)})" style="background-color: #2E1A10; border-bottom: 2px solid grey;">
 									<table width="100%">
 										<tr>
 											<td>{$raid['0']['raid_title']}</td>

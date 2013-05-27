@@ -1,7 +1,7 @@
 <div id="container">
 	<ul id="navlist">
 		{foreach key=id item=tab from=$lists}
-			<li{if $id == $list_sel} id="active"{/if}><a{if $id == $list_sel} id="current"{/if} href="?list={$id}">{$tab['title']}</a></li>
+			<li class="label"> <a href="?list={$id}">{$tab['title']}</a></li>
 		{/foreach}
 		{if $logged_in}
 		<form name="addlist" action="index.php" method="post">

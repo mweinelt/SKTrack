@@ -18,7 +18,7 @@ if (isset ($_POST['do']))
 	if ($do == "login")
 	{
 		$salt= md5(strtoupper($_POST['username']) . ":" . $_POST['password']);
-
+		//echo $salt;
 		$query= "SELECT id,username FROM sk_users WHERE username = '" . strtolower(mysql_real_escape_string($_POST['username'])) . "' AND password = '" . $salt . "'";
 		$result= mysql_query($query);
 

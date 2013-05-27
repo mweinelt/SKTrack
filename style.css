@@ -1,11 +1,12 @@
 body {
-	background: #000000;
+	background-color:transparent;
 	color: #FFFFFF;
 	font-size: 10pt;
 }
 body,p,h1,h2,h3,h4,table,td,th,ul,ol,textarea,input
 {
 	font-family: verdana,helvetica,arial,sans-serif;
+	color : #E9B772;
 }
 
 form { display: inline; }
@@ -20,9 +21,9 @@ a {	color: #fff; text-decoration: none; }
 #session {
 	width: 100%;
 	padding: 4px;
-	padding-left: 10px;
+	padding-left: 20px;
 	
-	background: #333333;
+	background-color: #491F13;
 	border-top: 2px solid grey;
 	border-bottom: 2px solid grey;
 	color: white;
@@ -43,13 +44,13 @@ img.item { height: 24px; width: 24px; float: left; }
 
 input.text {
 	width: 120px;
-	
-	background: #82A267;
+	background-color: #130B05;
 	border: 1px solid black;
 }
 input.button {
 	background: rgb(245, 245, 245);
 	background-image: -moz-linear-gradient(center top , rgb(245, 245, 245), rgb(241, 241, 241))
+	border-color: rgba(0, 0, 0, 0.1);
 	border-color: rgba(0, 0, 0, 0.1);
 	color: rgb(85, 85, 85);
 	margin: 16px 8px;
@@ -57,17 +58,17 @@ input.button {
 
 #content
 {
-	background: #222222;
-	border-left: 2px solid grey;
-	border-right: 2px solid grey;
-	border-bottom: 2px solid grey;
-	padding: 5px;
+	background-color: #29170F;
+	pading : 90px;
+	-moz-box-shadow:    3px 3px 5px 6px #000000;
+    -webkit-box-shadow: 3px 3px 5px 6px #000000;
+    box-shadow:         3px 3px 5px 6px #000000;
 }
 
 #navlist
 {
 	margin: 0;
-	border-bottom: 2px solid grey;
+	border-bottom: 0px solid grey;
 	font-weight: bold;
 	padding-left: 10px;
 	padding-top: 10px;
@@ -84,9 +85,9 @@ input.button {
 {
 	padding: 3px 0.5em;
 	margin-left: 0px;
-	border: 1px solid #778;
-	border-bottom: 2px solid grey;
-	background: #333333;
+	border: 0px solid #778;
+	border-bottom: 0px solid grey;
+	background: #491F13;
 	text-decoration: none;
 }
 
@@ -95,14 +96,36 @@ input.button {
 
 #navlist li a:hover
 {
-	color: #000;
-	background: #82A267;
+	color: #B39265;
+	background: #B39265;
 	border-color: grey;
 }
 
 #navlist li a#current
 {
-	background: #82A267;
-	color: #000000;
+	background-color: #852C05;
+	color: #E9B762;
 	border-bottom: 2px solid grey;
+}
+
+.shadow {
+	-moz-box-shadow: 0px 0px 6px #00000;
+	-webkit-box-shadow: 0px 0px 8px #000000;
+	box-shadow: 0px 0px 8px #000000;
+}
+.label {
+    border-radius: 4px 4px 4px 4px;
+	padding: 6px;
+	background: none repeat scroll 0% 0% rgb(75, 31, 20);
+	line-height: 1.2em;
+	top: 0px;
+	vertical-align: middle;
+	font-family: Tahoma,arial,Verdana,Sans-serif;
+	font-size: 1.1em;
+	font-weight: bold;
+	color: rgb(233, 189, 127);
+	margin-top: -0.4em;
+	position: relative;
+	text-transform: uppercase;
+}
 }
