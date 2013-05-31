@@ -13,10 +13,10 @@ setTimeout("location.reload(true);", {$sk['__log_autorefresh_time']});
 				<tr>
 					<td style="vertical-align: top;">
 						<table class="shadow" style="width: 250px;">
-							<tr style="background: #491F13; font-weight: bold;"><td style="border-bottom: 2px solid grey; width: 40px;">#</td><td style="border-bottom: 2px solid grey;">Spieler</td></tr>
+							<tr class="thead"><td style="border-bottom: 2px solid grey; width: 40px;">#</td><td style="border-bottom: 2px solid grey;">Spieler</td></tr>
 							<!-- Complete List -->
 							{foreach $pool as $player}
-							<tr {if ($player['active'] || $lists[$list_sel]['active_raid'] == -1) }style="color: white;"{else}style="color: grey;"{/if}>
+							<tr class={if ($player['active'] || $lists[$list_sel]['active_raid'] == -1) }active{else}inactive{/if}>
 								<td>{$player['pos'] + 1}</td>
 								<td><a href="{$sk['baselink_character']}{$player['name']}" target="{$sk['external_link_target']}">{$player['name']}</a></td>
 							</tr>
@@ -27,7 +27,7 @@ setTimeout("location.reload(true);", {$sk['__log_autorefresh_time']});
 					<td style="vertical-align: top;">
 						<table class="shadow" width="710px">
 							<tr>
-								<td style="border-bottom: 2px solid gray; background-color: #491F13; font-weight: bold;" colspan="4">Letzte Items</td>
+								<td class="thead" style="border-bottom: 2px solid gray; font-weight: bold;" colspan="4">Letzte Items</td>
 							</tr>
 							<!-- Item Log -->
 							{foreach $items as $raid}

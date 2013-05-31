@@ -5,27 +5,42 @@ body {
 }
 body,p,h1,h2,h3,h4,table,td,th,ul,ol,textarea,input
 {
+	color : #FFFFFF;
 	font-family: verdana,helvetica,arial,sans-serif;
-	color : #E9B772;
+	
 }
 
-form { display: inline; }
+form { 
+	display: inline; 
+}
 
-fieldset { width: 400px; display: inline; border: 0px; }
-legend { font-weight: bold; }
+fieldset { 
+	width: 400px; 
+	display: inline; 
+	border: 0px; 
+}
+legend { 
+	font-weight: bold; 
+}
 
-select { height: 400px; width: 90%; }
+select { 
+	height: 400px; 
+	width: 90%; 
+}
 
-a {	color: #fff; text-decoration: none; }
+a {	
+	color: #fff; 
+	text-decoration: none; 
+}
 
 #session {
 	width: 100%;
 	padding: 4px;
 	padding-left: 20px;
 	
-	background-color: #491F13;
-	border-top: 2px solid grey;
-	border-bottom: 2px solid grey;
+	background-color: #0E222F;
+	border-top: 1px solid #8CD2F2;
+	border-bottom: 1px solid #8CD2F2;
 	color: white;
 }
 
@@ -44,12 +59,12 @@ img.item { height: 24px; width: 24px; float: left; }
 
 input.text {
 	width: 120px;
-	background-color: #130B05;
+	background-color: #040F16;
 	border: 1px solid black;
 }
 input.button {
 	background: rgb(245, 245, 245);
-	background-image: -moz-linear-gradient(center top , rgb(245, 245, 245), rgb(241, 241, 241))
+	background-image: -moz-linear-gradient(center top , rgb(245, 245, 245), rgb(241, 241, 241));
 	border-color: rgba(0, 0, 0, 0.1);
 	border-color: rgba(0, 0, 0, 0.1);
 	color: rgb(85, 85, 85);
@@ -58,11 +73,10 @@ input.button {
 
 #content
 {
-	background-color: #29170F;
-	pading : 90px;
-	-moz-box-shadow:    3px 3px 5px 6px #000000;
-    -webkit-box-shadow: 3px 3px 5px 6px #000000;
-    box-shadow:         3px 3px 5px 6px #000000;
+	background-color: #0E222F;
+	pading:90px;
+	padding-right:90px; 
+	border: 1px solid #8CD2F2;
 }
 
 #navlist
@@ -85,10 +99,9 @@ input.button {
 {
 	padding: 3px 0.5em;
 	margin-left: 0px;
-	border: 0px solid #778;
-	border-bottom: 0px solid grey;
-	background: #491F13;
+	background: #0E222F;
 	text-decoration: none;
+	border: 1px solid #8CD2F2;
 }
 
 #navlist li a:link { color: #FFF; }
@@ -96,8 +109,8 @@ input.button {
 
 #navlist li a:hover
 {
-	color: #B39265;
-	background: #B39265;
+	color: #FFF;
+	background: #163549;
 	border-color: grey;
 }
 
@@ -113,19 +126,14 @@ input.button {
 	-webkit-box-shadow: 0px 0px 8px #000000;
 	box-shadow: 0px 0px 8px #000000;
 }
-.label {
-    border-radius: 4px 4px 4px 4px;
-	padding: 6px;
-	background: none repeat scroll 0% 0% rgb(75, 31, 20);
-	line-height: 1.2em;
-	top: 0px;
-	vertical-align: middle;
-	font-family: Tahoma,arial,Verdana,Sans-serif;
-	font-size: 1.1em;
+.thead {
+	background-color: #040F16;
 	font-weight: bold;
-	color: rgb(233, 189, 127);
-	margin-top: -0.4em;
-	position: relative;
-	text-transform: uppercase;
 }
+.active {
+	background-color: #040F16;
+	color: #E9B762;
+}
+.label {
+
 }
