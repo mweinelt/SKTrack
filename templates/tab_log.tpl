@@ -16,7 +16,7 @@ setTimeout("location.reload(true);", {$sk['__log_autorefresh_time']});
 							<tr class="thead"><td style="border-bottom: 2px solid grey; width: 40px;">#</td><td style="border-bottom: 2px solid grey;">Spieler</td></tr>
 							<!-- Complete List -->
 							{foreach $pool as $player}
-							<tr class={if ($player['active'] || $lists[$list_sel]['active_raid'] == -1) }active{else}inactive{/if}>
+							<tr class={if ($player['active']}active{else}inactive{/if}>
 								<td>{$player['pos'] + 1}</td>
 								<td><a href="{$sk['baselink_character']}{$player['name']}" target="{$sk['external_link_target']}">{$player['name']}</a></td>
 							</tr>
