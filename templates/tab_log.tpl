@@ -32,7 +32,7 @@ setTimeout("location.reload(true);", {$sk['__log_autorefresh_time']});
 							<!-- Item Log -->
 							{foreach $items as $raid}
 							<tr>
-								<td colspan="4" onclick="toggleRaidLog({$raid['0']['raid_iterator']}, {count($raid)})" style="background-color: #2E1A10; border-bottom: 2px solid grey;">
+								<td colspan="4" onclick="toggleRaidLog({$raid['0']['raid_iterator']}, {count($raid)})" style="background-color: #0E222F; border-bottom: 2px solid grey;">
 									<table width="100%">
 										<tr>
 											<td>{$raid['0']['raid_title']}</td>
