@@ -210,7 +210,7 @@ if (isset ($_POST['do']))
 			$old_pos = $row['pos_old'];
 			$new_pos = $row['pos_new'];
 			
-			assert($old_pos == -1 || $new_pos == -1); // invalid positions (from db, so if an assert pops here, error should be in do=distribute)
+			assert($old_pos != -1 && $new_pos != -1); // invalid positions (from db, so if an assert pops here, error should be in do=distribute)
 			
 			// get current order
 			$query = "SELECT * FROM sk_list_position WHERE list_id = $list_id AND raid_id = $raid_id ORDER BY position ASC";
