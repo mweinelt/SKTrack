@@ -70,6 +70,7 @@
 						<form id="revert" action="index.php" method="post">
 						<input type="hidden" name="do" value="revert" />
 						<input type="hidden" name="raid_id" value="{$raid_sel}" />
+						<input type="hidden" name="list_id" value="{$list_sel}" />
 						<input type="submit" value="&#8634;" />
 						</form>
 					{/if}
