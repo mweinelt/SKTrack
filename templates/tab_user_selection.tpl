@@ -28,14 +28,14 @@
 				<input type="hidden" name="list" value="{$list_sel}" />
 				<select id="raid" name="raid[]" size="50" multiple="multiple" onclick="move(false);">
 				<!-- loop only for debugging purposes -->
-				{foreach $raid as $player}
+				{if isset($raid)}{foreach $raid as $player}
 					<option value="{$player['uid']}">({$player['pos']}) {$player['name']}</option>
-				{/foreach}
+				{/foreach}{/if}
 				</select>
 				<p>3. Raid fertig? Titel eingeben...<br />
 				&nbsp;<br />
 				<input class="text" type="text" id="raidname" name="raidname" style="width: 315px;" /><br /><br />
-				...dann weiter zur Lootvergabe!</br />
+				...dann weiter zur Lootvergabe!<br />
 				<input class="button" onclick="return isEmpty();" type="submit" value="Raid starten" /></p>
 			</form>
 		</td>

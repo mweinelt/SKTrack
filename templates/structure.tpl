@@ -4,7 +4,8 @@
 		<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
 		<link rel="stylesheet" type="text/css" href="style.css" />
 		<script type="text/javascript" src="sk.js"></script>
-		<script type="text/javascript" src="http://static.wowhead.com/widgets/power.js"></script>
+		<!--<script type="text/javascript" src="http://static.wowhead.com/widgets/power.js"></script>-->
+		<script type="text/javascript" src="http://cdn.openwow.com/api/tooltip.js"></script>
 	</head>
 	<body>
 		<div id="session">

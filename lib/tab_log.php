@@ -93,7 +93,7 @@ if (mysql_num_rows($result) > 0)
 										"item_iterator" => $item_iterator[$row['raid_id']]++,
 										"item_id" => $row['item_id'],
 										"item_quality" => $row['quality'],
-										"item_name" => htmlentities($row['name']),
+										"item_name" => htmlentities(utf8_encode($row['name'])),
 										"lootmode" => lootmode($row['lootmode'], $row['pos_old'], $row['pos_new']),
 										"loottime" => $lootTime,
 										"raid_iterator" => $row['raid_id'],

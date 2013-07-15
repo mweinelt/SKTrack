@@ -76,10 +76,10 @@ while ($row = mysql_fetch_assoc($result))
 	$items[] = array("username" => $row['username'],
 					 "item_id" => $row['item_id'],
 					 "item_quality" => $row['quality'],
-					 "item_name" => htmlentities($row['name']),
+					 "item_name" => htmlentities(utf8_encode($row['name'])),
 					 "lootmode" => lootmode($row['lootmode'], $row['pos_old'], $row['pos_new']),
 					 "loottime" => $lootTime,
-					 "raid_title" => htmlentities($row['raidtitle']),
+					 "raid_title" => htmlentities(utf8_encode($row['title'])),
 					 "raid_id" => $row['raid_id'],
 					 "raid_start" => $raidStart,
 					 "revert" => $i++ == 0 ? true : false); // only last entry allows reverting to prevent invalid unsuiciding for now

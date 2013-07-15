@@ -29,7 +29,7 @@ while ($row = mysql_fetch_assoc($result))
 $smarty->assign("lists", $lists);
 
 // remember list/raid id
-$_SESSION['list_sel'] = (isset($_GET['list']))?  intval($_GET['list']) : 1;
+$_SESSION['list_sel'] = (isset($_REQUEST['list']))?  intval($_REQUEST['list']) : 1;
 
 if (isset($lists[$_SESSION['list_sel']]['active_raid']))
 	$_SESSION['raid_sel'] = $lists[$_SESSION['list_sel']]['active_raid'];
